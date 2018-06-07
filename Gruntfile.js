@@ -117,6 +117,17 @@ module.exports = function(grunt) {
 			}
 		},
 
+		includes: {
+			files: {
+			  	src: [ 'template.html' ],
+			  	dest: 'index.html',
+			  	cwd: '.',
+			  	options: {
+					silent: true
+			  	}
+			}
+		},
+
 		watch: {
 			js: {
 				files: [ 'Gruntfile.js', 'js/reveal.js' ],
@@ -141,6 +152,10 @@ module.exports = function(grunt) {
 			markdown: {
 				files: root.map(path => path + '/*.md')
 			},
+			include: {
+				files: [ 'template.html', 'slides/*.html' ],
+				tasks: 'includes'
+			},
 			options: {
 				livereload: true
 			}
@@ -161,6 +176,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks( 'grunt-contrib-uglify' );
 	grunt.loadNpmTasks( 'grunt-contrib-watch' );
 	grunt.loadNpmTasks( 'grunt-autoprefixer' );
+	grunt.loadNpmTasks( 'grunt-includes');
 	grunt.loadNpmTasks( 'grunt-retire' );
 	grunt.loadNpmTasks( 'grunt-sass' );
 	grunt.loadNpmTasks( 'grunt-zip' );
@@ -184,7 +200,7 @@ module.exports = function(grunt) {
 	grunt.registerTask( 'package', [ 'default', 'zip' ] );
 
 	// Serve presentation locally
-	grunt.registerTask( 'serve', [ 'connect', 'watch' ] );
+	grunt.registerTask( 'serve', [ 'connect', 'includes', 'watch' ] );
 
 	// Run tests
 	grunt.registerTask( 'test', [ 'jshint', 'qunit' ] );
