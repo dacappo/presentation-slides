@@ -44,6 +44,24 @@ section.has-dark-background {
 	}
 }
 
+a.branding {
+	display: block;
+	font-size: 1.3em;
+	background-image:linear-gradient( to top right, #009980, #00d9c0);
+	color: white;
+	text-decoration: none;
+	font-family: 'Montserrat', 'Source Sans Pro', Helvetica, sans-serif;
+	background-color: #00a990;
+	border-bottom-left-radius: 1em;
+	border-top-right-radius: 1em;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	border: 0;
+	margin: 1em;
+	padding: .5em .4em;
+}
+
 
 // Theme template ------------------------------
 @import "../template/theme";
