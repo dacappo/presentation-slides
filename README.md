@@ -1,13 +1,10 @@
-# Personal reveal.js template
+# Slide Decks
 
-This extended reveal.js fork serves as the basis for my presentations. For official reveal.js documentation see [repository](https://github.com/hakimel/reveal.js#markup).
+This reposiotry serves as the place to organize my presentaiton slides. For official reveal.js documentation see [repository](https://github.com/hakimel/reveal.js#markup).
 
-## Creating a new presentation
+## Description
 
-Fork this repository and add content slides. Updates of reveal.js can be accomplished by rebasing the actual presentation repositories with this base template.
+The master branch contains the additonal styles and serves as a base-branch to integrate upstream changes. Actual slide decks are handled in separate branches and upstream changes from master are rebased.
 
-## Additional styles
-
-- PERSONAL (tbd)
-- KIT (tbd)
-- SAP (tbd)
+## Slides
+- **JavaScript 101** - Introduction to JS, Node.js and the basic language concepts -[Slides](https://github.com/dacappo/presentation-slides/tree/presentation-javascript-101)
